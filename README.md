@@ -1,6 +1,6 @@
 # Personal Blog web app
 
-Project Task URL: [https://roadmap.sh/projects/unit-converter](https://roadmap.sh/projects/personal-blog)
+Project Task URL: https://roadmap.sh/projects/personal-blog
 
 this web app was created because of the Unit Converter challenge from roadmap.sh.
 
