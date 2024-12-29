@@ -1,0 +1,30 @@
+﻿@model PersonalBlogMvc.Views.Dashboard.EditArticleModel
+
+<style>
+    main {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Alterado para alinhar ao topo */
+        min-height: 100vh; /* Isso garante que o conteúdo ocupe pelo menos a altura da tela */
+        box-sizing: border-box;
+    }
+</style>
+
+<form method="post">
+    <div class="form-group">
+        <input type="hidden" asp-for="Article.ArticleId">
+        <label asp-for="Article.ArticleTitle">Article Title</label>
+        <input type="text" asp-for="Article.ArticleTitle" placeholder="Enter the title">
+    </div>
+    <div class="form-group">
+        <label asp-for="Article.ArticlePublishDate">Publishing Date</label>
+        <input type="date" asp-for="Article.ArticlePublishDate">
+    </div>
+    <div class="form-group">
+        <label asp-for="Article.ArticleContent">Content</label>
+        <textarea asp-for="Article.ArticleContent" placeholder="Enter the article content"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-danger mt-4" asp-action="Edit" style="float:right">Submit</button>
+</form>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Article - Personal blog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alterado para alinhar ao topo */
+            min-height: 100vh; /* Isso garante que o conteúdo ocupe pelo menos a altura da tela */
+            box-sizing: border-box;
+        }
+        form {
+            width: 100%;
+            max-width: 600px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #aaa;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="dashboard.html">Personal blog</a>
+        </div>
+        <h1>Edit Article</h1>
+        <a href="#" class="action-link">Update</a>
+        <a href="dashboard.html" class="action-link">Go back</a>
+    </header>
+    <main>
+        <form>
+            <div class="form-group">
+                <label for="title">Article Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter the title">
+            </div>
+            <div class="form-group">
+                <label for="date">Publishing Date</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea id="content" name="content" placeholder="Enter the article content"></textarea>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

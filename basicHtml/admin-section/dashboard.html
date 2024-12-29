@@ -1,0 +1,129 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Personal blog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .articles {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .article {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .article:last-child {
+            border-bottom: none;
+        }
+        .article-title {
+            font-weight: bold;
+        }
+        .article-date {
+            color: #777;
+            margin-left: 10px;
+        }
+        .article-actions a {
+            margin-left: 10px;
+            color: #aaa;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .article-actions a:hover {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">Personal blog</a>
+        </div>
+        <h1>Articles</h1>
+        <a class="action-link" href="addArticle.html">+Add</a>
+        <a class="action-link" href="#">Log out</a>
+    </header>
+
+    <div class="articles">
+        <div class="article">
+            <span class="article-title">Explorando o mundo das APIs</span>
+            <span class="article-date">27/12/2024</span>
+            <div class="article-actions">
+                <a href="editArticle.html">Edit</a>
+                <a href="#">Delete</a>
+            </div>
+        </div>
+        <div class="article">
+            <span class="article-title">Dicas para começar com React</span>
+            <span class="article-date">20/12/2024</span>
+            <div class="article-actions">
+                <a href="editArticle.html">Edit</a>
+                <a href="#">Delete</a>
+            </div>
+        </div>
+        <div class="article">
+            <span class="article-title">Como estruturar seu código em C#</span>
+            <span class="article-date">15/12/2024</span>
+            <div class="article-actions">
+                <a href="editArticle.html">Edit</a>
+                <a href="#">Delete</a>
+            </div>
+        </div>
+        <div class="article">
+            <span class="article-title">Boas práticas em GitHub Actions</span>
+            <span class="article-date">10/12/2024</span>
+            <div class="article-actions">
+                <a href="editArticle.html">Edit</a>
+                <a href="#">Delete</a>
+            </div>
+        </div>
+        <div class="article">
+            <span class="article-title">Introdução ao desenvolvimento de jogos</span>
+            <span class="article-date">05/12/2024</span>
+            <div class="article-actions">
+                <a href="editArticle.html">Edit</a>
+                <a href="#">Delete</a>
+            </div>
+        </div>
+        <div class="article">
+            <span class="article-title">Otimizando queries no NHibernate</span>
+            <span class="article-date">01/12/2024</span>
+            <div class="article-actions">
+                <a href="editArticle.html">Edit</a>
+                <a href="#">Delete</a>
+            </div>
+        </div>
+        <div class="article">
+            <span class="article-title">Testando aplicações com NUnit</span>
+            <span class="article-date">25/11/2024</span>
+            <div class="article-actions">
+                <a href="editArticle.html">Edit</a>
+                <a href="#">Delete</a>
+            </div>
+        </div>
+        <div class="article">
+            <span class="article-title">Injeção de dependência com Ninject</span>
+            <span class="article-date">18/11/2024</span>
+            <div class="article-actions">
+                <a href="editArticle.html">Edit</a>
+                <a href="#">Delete</a>
+            </div>
+        </div>
+        <div class="article">
+            <span class="article-title">Melhorando o design de seu blog</span>
+            <span class="article-date">12/11/2024</span>
+            <div class="article-actions">
+                <a href="editArticle.html">Edit</a>
+                <a href="#">Delete</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+﻿@model PersonalBlogMvc.Views.Home.ArticleModel
+@{
+    ViewData["Title"] = "Article";
+}
+
+<div class="article-container">
+    <div class="article-title">@Model.Article.ArticleTitle</div>
+    <div class="article-date">@Model.Article.ArticlePublishDate</div>
+    <div class="article-content">
+        <p>@Model.Article.ArticleContent</p>
+    </div>
+</div>

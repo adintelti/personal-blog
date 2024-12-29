@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="articles">
+    @foreach (var item in (List<ArticleViewModel>)ViewData["Articles"]!)
+    {
+        <div class="article">
+            <span class="article-list-title"><a href="@Url.Action("Article", "Home", new { id = item.ArticleId})">@item.ArticleTitle</a></span>
+            <span class="article-list-date">@item.ArticlePublishDate</span>
+        </div>
+    }
+</div>

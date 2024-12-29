@@ -1,0 +1,14 @@
+﻿
+<div class="articles">
+    @foreach (var item in (List<ArticleViewModel>)ViewData["Articles"]!)
+    {
+        <div class="article">
+            <span class="article-list-title">@item.ArticleTitle</span>
+            <span class="article-list-date">@item.ArticlePublishDate</span>
+            <div class="article-actions">
+                <a href="@Url.Action("EditArticle", "Dashboard", new { id = item.ArticleId})">Edit</a>
+                <a href="@Url.Action("DeleteArticle", "Dashboard", new { id = item.ArticleId})">Delete</a>
+            </div>
+        </div>
+    }
+</div>

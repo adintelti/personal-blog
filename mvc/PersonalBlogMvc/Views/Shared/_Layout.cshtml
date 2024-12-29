@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PersonalBlogMvc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PersonalBlogMvc.styles.css" asp-append-version="true" />
+    <style>
+        .articles {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .article {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .article:last-child {
+            border-bottom: none;
+        }
+        .article-list-title {
+            font-weight: bold;
+        }
+        .article-list-date {
+            color: #777;
+        }
+        .article a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .article-container {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .article-date {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .article-content {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        form {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #aaa;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">Personal blog Mvc</a>
+        </div>
+        <h1>Articles</h1>
+        @if (ViewData["ShowGoBackButton"] != null && (bool)ViewData["ShowGoBackButton"])
+        {
+            <a href="javascript:history.back()" class="action-link">Go back</a>
+        }
+        @if (ViewData["ShowAddButton"] != null && (bool)ViewData["ShowAddButton"])
+        {
+            <a href="Dashboard/AddArticle" class="action-link">Add</a>
+        }
+        @if (ViewData["ShowLogoutButton"] != null && (bool)ViewData["ShowLogoutButton"])
+        {
+            <a href="@Url.Action("Index", "Home")" class="action-link">Log out</a>
+        }
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - PersonalBlogMvc - <a asp-area="" asp-controller="Home" asp-action="Article">Article</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
